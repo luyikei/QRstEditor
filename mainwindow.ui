@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>532</width>
+    <height>345</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="1" column="0">
+     <widget class="Edit" name="ReSTEdit"/>
+    </item>
+    <item row="0" column="0">
+     <widget class="QLabel" name="ReST">
+      <property name="text">
+       <string>ReST</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QLabel" name="HTML">
+      <property name="text">
+       <string>HTML</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QTextEdit" name="HTMLView"/>
+    </item>
+    <item row="2" column="0">
+     <widget class="QPushButton" name="Convert">
+      <property name="text">
+       <string>Convert</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QCheckBox" name="IsAutoConvert">
+      <property name="text">
+       <string>AutoConverting</string>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>532</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_F">
+    <property name="title">
+     <string>ファイル(&amp;F)</string>
+    </property>
+    <addaction name="action_N"/>
+    <addaction name="openAction"/>
+    <addaction name="saveAction"/>
+    <addaction name="separator"/>
+    <addaction name="closeAction"/>
+   </widget>
+   <widget class="QMenu" name="menu_E">
+    <property name="title">
+     <string>編集(&amp;E)</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menu_V">
+    <property name="title">
+     <string>表示(&amp;V)</string>
+    </property>
+   </widget>
+   <addaction name="menu_F"/>
+   <addaction name="menu_E"/>
+   <addaction name="menu_V"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>true</bool>
+   </attribute>
+   <addaction name="toEmphasisAction"/>
+   <addaction name="toStrongAction"/>
+   <addaction name="separator"/>
+   <addaction name="toH1Action"/>
+   <addaction name="toH2Action"/>
+   <addaction name="toH3Action"/>
+   <addaction name="separator"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="action_N">
+   <property name="text">
+    <string>新規(&amp;N)</string>
+   </property>
+  </action>
+  <action name="openAction">
+   <property name="text">
+    <string>開く(&amp;O)...</string>
+   </property>
+  </action>
+  <action name="closeAction">
+   <property name="text">
+    <string>終了(&amp;Q)</string>
+   </property>
+  </action>
+  <action name="saveAction">
+   <property name="text">
+    <string>保存(&amp;S)</string>
+   </property>
+  </action>
+  <action name="toH1Action">
+   <property name="text">
+    <string>h1</string>
+   </property>
+  </action>
+  <action name="toH2Action">
+   <property name="text">
+    <string>h2</string>
+   </property>
+  </action>
+  <action name="toH3Action">
+   <property name="text">
+    <string>h3</string>
+   </property>
+  </action>
+  <action name="toStrongAction">
+   <property name="text">
+    <string>S</string>
+   </property>
+   <property name="toolTip">
+    <string>S</string>
+   </property>
+  </action>
+  <action name="toEmphasisAction">
+   <property name="text">
+    <string>E</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>Edit</class>
+   <extends>QPlainTextEdit</extends>
+   <header location="global">edit.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
